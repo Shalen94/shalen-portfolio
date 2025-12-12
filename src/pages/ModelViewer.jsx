@@ -3,7 +3,9 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Stage, useGLTF } from "@react-three/drei";
 import './Navbar.css' ;
 function Model() {
-  const { scene } = useGLTF("/Models/dragon10.glb"); 
+  const { scene } = useGLTF(import.meta.env.BASE_URL + "Models/dragon10.glb");
+  
+
   return <primitive object={scene} scale={1.5} />;
 }
 
