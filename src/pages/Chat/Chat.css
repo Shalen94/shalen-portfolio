@@ -1,0 +1,205 @@
+/* Floating neon button */
+.chat-toggle-btn {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  background: #0ff;
+  color: #000;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 0 20px #0ff, 0 0 50px #0ff;
+  z-index: 1000;
+  animation: pulse 1.5s infinite alternate;
+}
+
+/* Neon chat box */
+.chat-container {
+  position: fixed;
+  bottom: 90px;
+  right: 100px;
+  width: 330px;
+  height: 420px;
+  border-radius: 14px;
+  background: rgba(10, 10, 20, 0.9);
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  padding-bottom: 10px;
+  animation: slideUp 0.3s ease-out;
+}
+
+.neon-border {
+  border: 2px solid #0ff;
+  box-shadow: 0 0 15px #0ff, inset 0 0 15px #0ff;
+}
+
+/* Title */
+.neon-title {
+  margin: 0;
+  padding: 12px;
+  text-align: center;
+  color: #0ff;
+  font-size: 22px;
+  letter-spacing: 1px;
+  text-shadow: 0 0 8px #0ff;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 12px 12px 0 0;
+}
+
+/* Chat messages area */
+.chat-window {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Neon message bubble */
+.neon-bubble {
+  padding: 10px 16px;
+  max-width: 80%;
+  border-radius: 14px;
+  font-size: 14px;
+  line-height: 1.4;
+  white-space: pre-line;
+  animation: pop 0.3s ease-out;
+}
+
+.msg.bot {
+  background: rgba(0, 255, 255, 0.15);
+  border: 1px solid #0ff;
+  color: #0ff;
+  box-shadow: 0 0 12px #0ff;
+  align-self: flex-start;
+}
+
+.msg.user {
+  background: rgba(255, 0, 255, 0.15);
+  border: 1px solid #f0f;
+  color: #f0f;
+  box-shadow: 0 0 12px #f0f;
+  align-self: flex-end;
+}
+
+/* Input area */
+.input-area {
+  display: flex;
+  padding: 12px;
+  border-top: 1px solid rgba(0, 255, 255, 0.2);
+  gap: 10px;
+}
+
+.input-area input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #0ff;
+  background: rgba(0, 0, 0, 0.4);
+  color: #0ff;
+  outline: none;
+  box-shadow: inset 0 0 10px #0ff;
+}
+
+.input-area button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  background: #0ff;
+  color: #000;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 0 10px #0ff;
+}
+
+.input-area button:disabled {
+  background: #555;
+  color: #999;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+/* Suggestions */
+.suggestions {
+  list-style: none;
+  margin: 0;
+  padding: 8px;
+  max-height: 150px;
+  overflow-y: auto;
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid #0ff;
+  border-radius: 8px;
+  position: absolute;
+  bottom: 70px;
+  right: 12px;
+  width: 80%;
+  color: #0ff;
+  box-shadow: 0 0 12px #0ff;
+}
+
+.suggestions li {
+  padding: 6px;
+  cursor: pointer;
+}
+
+.suggestions li:hover {
+  background: rgba(0, 255, 255, 0.2);
+}
+
+/* Animations */
+@keyframes slideUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pop {
+  from {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  from {
+    box-shadow: 0 0 8px #0ff, 0 0 20px #0ff;
+  }
+  to {
+    box-shadow: 0 0 20px #0ff, 0 0 50px #0ff;
+  }
+}
+
+/* Close X button */
+.close-btn {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  background: transparent;
+  border: none;
+  color: #0ff;
+  font-size: 20px;
+  cursor: pointer;
+  text-shadow: 0 0 8px #0ff;
+}
+a{
+  color: #0ff;
+  text-decoration: none;
+}
+a:hover{
+  color: rgb(2, 206, 206);
+  text-decoration: underline;
+}

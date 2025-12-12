@@ -1,0 +1,117 @@
+/* MAIN WRAPPER */
+.project-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 100px 20px;
+  color: #e4e8ff;
+  font-family: 'Poppins', sans-serif;
+  animation: fadeIn 1s ease forwards;
+}
+
+/* NEON TITLE */
+.project-title {
+  font-size: 2.4rem;
+  text-align: center;
+  color: #66b3ff;
+  text-shadow: 0 0 15px #009aff, 0 0 30px #0066ff;
+  animation: glowPulse 2.5s infinite alternate;
+}
+
+/* TAGLINE */
+.project-tagline {
+  text-align: center;
+  color: #ffdd77;
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  text-shadow: 0 0 10px #ffcc55;
+  animation: fadeUp 1s ease;
+}
+
+/* SECTION */
+.project-section {
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid #2a3cff;
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  backdrop-filter: blur(8px);
+  transition: transform .3s ease, box-shadow .3s ease;
+  animation: slideIn 0.6s ease;
+}
+
+.project-section:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px #3c68ffaa;
+}
+
+/* HEADINGS */
+.section-heading {
+  font-size: 1.6rem;
+  color: #7bb2ff;
+  margin-bottom: 12px;
+  text-shadow: 0 0 12px #2e6dff;
+  animation: neonText 2s infinite alternate;
+}
+
+/* TEXT */
+.section-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #d5ddff;
+}
+
+/* FEATURES LIST */
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.feature-list li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #c9d4ff;
+  transition: color .3s ease;
+}
+
+.feature-list li::before {
+  content: "✦";
+  position: absolute;
+  left: 0;
+  color: #66b3ff;
+  text-shadow: 0 0 10px #3c8fff;
+}
+
+.feature-list li:hover {
+  color: #ffffff;
+  text-shadow: 0 0 12px #4f8cff;
+}
+
+/* ANIMATIONS --------------------------------*/
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes glowPulse {
+  from { text-shadow: 0 0 8px #009aff; }
+  to { text-shadow: 0 0 25px #009aff; }
+}
+
+@keyframes neonText {
+  from { text-shadow: 0 0 5px #0044ff; }
+  to { text-shadow: 0 0 25px #6791ff; }
+}

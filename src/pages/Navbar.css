@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&display=swap');
+
+.nav-container{
+    position: fixed;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    padding-bottom: 10px; 
+    z-index: 1000; 
+}
+.navbar{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    z-index: 50; 
+}
+
+.nav-container .navbar .profile{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+     z-index: 151;
+    
+}
+.nav-container .navbar h1{
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    padding-left: 10px;
+    margin-top: 10px;
+}
+
+.nav-container .navbar img{
+    width: auto;
+    height: 60px;
+    border-radius: 50%;
+    padding: 10px;
+}
+.nav-container .navbar .tags{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    padding-right: 50px;
+}
+.nav-container .navbar .tags p{
+    font-size: 1.5rem;
+    color: aliceblue;
+    padding: 0px 40px;
+    margin-top: 10px;
+}
+.aboutmetext{
+    background-color: rgba(0, 213, 0, 0);
+    padding: 20px;
+    position: relative;
+    font-family: "Edu NSW ACT Cursive", cursive;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    width: 600px;
+    margin-top: 20%;
+    margin-left: 30px;
+    z-index: 125;
+}
+.aboutmetext h3{
+    color: white;
+    font-family: "Edu NSW ACT Cursive", cursive;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+.aboutmetext h1{
+    font-size: 3rem;
+    color: white;
+    width: fit-content;
+    color: #fff;
+    text-shadow: 0 0 7px #29aae1,
+                 0 0 12px #00e1fa,
+                 0 0 20px #ff0000;
+}
+.aboutmetext h1 span{
+    font-size: 1.5rem;
+}
+.aboutmetext p{
+    color: white;
+    font-size: 1.2rem;
+}
+
+
+
+.object{
+    position: relative;
+    z-index: 1 ;
+    height: 600px  !important;
+    border-radius: 20px;
+
+}
+.aboutModal{
+    display: flex;
+}
+
+
+@media (max-width: 800px) {
+  .page { flex-direction: column; }
+  .navbar::before { width: 100%; } /* make overlay full width on mobile if needed */
+}
+@media (max-width:631) {
+  .aboutModal{
+    display: none !important;
+  }
+  .aboutmetext{
+    width: 100% !important;
+    height: fit-content !important;
+  }
+}
+
+
+
+/* ---------- Typing Animation ---------- */
+.typing {
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #fff;
+  animation: typing 3s steps(10), blink 0.6s step-end infinite alternate;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 240px; } /* adjust width depending on name length */
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+/* ---------- Fade-in Text ---------- */
+.aboutmetext p {
+  opacity: 0;
+  animation: fadeIn 1.5s ease forwards;
+  animation-delay: 1.5s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- Slide-In Title ---------- */
+.aboutmetext h3 {
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: slideIn 1s ease forwards;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* ---------- Glow Hover Effect on Name ---------- */
+.typing:hover {
+  text-shadow: 0 0 10px #00f7ff, 0 0 20px #00f7ff;
+  transition: 0.3s;
+}
+
+/* ---------- Smooth Entrance For Wrapper ---------- */
+.aboutmetext {
+  animation: fadeUp 0.8s ease forwards;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+

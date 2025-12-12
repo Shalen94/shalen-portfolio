@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.appJSX{
+    background-image: url('./assets/bg19.jpg');
+    background-size: cover;     /* makes image cover whole screen */
+    background-position: center; /* centers the image */
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+@media (max-width:630px) {
+  .appJSX{
+    width: 200vh;
+  }
+  
+}
+.section-title{
+  color: #00e5ff;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  padding: 0 10px 40px 10px;
+}
+.homePage{
+  background-color: transparent !important;
+}

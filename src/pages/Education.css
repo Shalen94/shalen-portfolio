@@ -1,0 +1,124 @@
+/* MAIN CONTAINER */
+.crazy-container {
+  position: relative;
+  width: 100%;
+  margin-bottom: 200px !important;
+  min-height: 280vh !important;
+  padding-top: 80px;
+}
+
+/* CENTER LINE */
+.vertical-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 95%; /* auto for long content */
+  background: #ffffff55;
+  transition: box-shadow .4s ease;
+  z-index: 1;
+}
+
+/* GLOW COLORS */
+.glow-1 { box-shadow: 0 0 20px 5px #ff4f4f; }
+.glow-2 { box-shadow: 0 0 20px 5px #4fafff; }
+.glow-3 { box-shadow: 0 0 20px 5px #9dff4f; }
+
+/* BOXES */
+.fade-box {
+  width: 40%;
+  padding: 40px;
+  background: #000000b5;
+  border-radius: 12px;
+  opacity: 0;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 2;
+
+  transform: translateY(50px) scale(0.96);
+  transition: all .7s cubic-bezier(.17,.67,.45,1.28);
+  will-change: transform !important;
+}
+
+.left { margin-left: 10%; }
+.right { margin-left: 50%; }
+
+/* APPEAR ANIMATION */
+.fade-box.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* GLOW ON BOX */
+.fade-box.glow-1 { border: 2px solid #ff4f4f; box-shadow: 0 0 25px #ff4f4f88; }
+.fade-box.glow-2 { border: 2px solid #4fafff; box-shadow: 0 0 25px #4fafff88; }
+.fade-box.glow-3 { border: 2px solid #9dff4f; box-shadow: 0 0 25px #9dff4f88; }
+
+/* TEXT */
+.edu-title { font-size: 28px; font-weight: 700; margin-bottom: 15px; }
+.degree { font-size: 20px; font-weight: 600; margin-bottom: 5px; }
+.college { font-size: 17px; font-weight: 500; margin-bottom: 15px; }
+.edu-details { font-size: 15px; line-height: 1.6; }
+
+.first { color: #4fafff; }
+.second { color: #9dff4f; }
+.third { color: #ff4f4f; }
+
+/* ------------------------------------
+   RESPONSIVE + ZOOM-SAFE FIXES
+------------------------------------ */
+@media (max-width: 1100px) {
+  .fade-box { width: 60%; }
+  .right { margin-left: 35%; }
+  .crazy-container{
+    margin-bottom: 450px !important;
+    min-height: 400vh;
+  }
+  .vertical-line{
+    height: 200px !important;
+  }
+}
+
+
+
+@media (max-width: 576px) {
+  .fade-box {
+    width: 90%;
+    padding: 25px;
+  }
+  .right{
+    margin-left: 10% !important;
+  }
+
+  .vertical-line {
+    left: 12%;
+    width: 3px;
+  }
+  .crazy-container{
+    margin-bottom: 300px !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .fade-box {
+    width: 95%;
+    padding: 18px;
+  }
+}
+
+
+/* FIX: Keep boxes inside container */
+.crazy-container {
+  overflow: visible;
+}
+
+/* FIX: Make line match content height */
+.vertical-line {
+  height: 100% !important;
+}
+
+/* FIX: Parallax should NOT shrink container */
+.fade-box {
+  will-change: transform;
+}

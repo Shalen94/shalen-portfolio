@@ -1,0 +1,71 @@
+/* MAIN CONTAINER */
+.main-container{
+    position: relative;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 10% ;
+    padding-top: 10%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap; /* responsive */
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+
+/* EACH CARD */
+.certificates{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;                /* hidden initially */
+    transform: translateY(40px); /* start slightly down */
+    transition: all 0.8s ease-out;
+}
+
+/* ONCE VISIBLE ADD THIS CLASS */
+.certificates.reveal {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* IMAGES */
+.certificates img{
+    height: 150px;
+    width: auto;
+    transition: 0.4s ease;
+    filter: drop-shadow(0 0 12px rgba(255,255,255,0.3));
+}
+
+/* GLOW & SCALE ON HOVER */
+.certificates img:hover{
+    transform: scale(1.08);
+    filter: drop-shadow(0 0 20px rgb(0 229 255));
+}
+
+/* TEXT */
+.certificates p{
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-family: "Edu NSW ACT Cursive", cursive;
+    font-weight: 700;
+    padding-left: 20px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px){
+    .certificates img{
+        height: 130px;
+    }
+    .certificates p{
+        font-size: 1rem;
+    }
+}
+.certificates a:hover{
+    text-decoration: none;
+}

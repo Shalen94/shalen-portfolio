@@ -1,0 +1,295 @@
+.skills-orbit-container {
+  text-align: center;
+  color: white;
+  padding-bottom: 100px;
+  padding-top: 10% !important;
+}
+
+.skills-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 5%;
+  text-shadow: 0 0 20px cyan;
+}
+
+/* ORBIT */
+.orbit {
+  width: 350px;
+  height: 350px;
+  position: relative;
+  margin: auto;
+  background-color: rgba(0, 128, 0, 0);
+  border-radius: 50% !important;
+  animation: rotate 15s linear infinite;  
+}
+.orbit:hover {
+  animation-play-state: paused;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ICON FIX: mathematically correct orbit */
+.orbit-item {
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  /* true circular orbit */
+  transform: rotate(var(--angle)) translate(150px) rotate(calc(-1 * var(--angle)));
+}
+.item-HTML{
+  top: 40% !important ;
+  left: 47% !important;
+}
+.item-CSS{
+  top: 42% !important ;
+  left: 46% !important;
+}
+.item-JAVASCRIPT{
+  top: 42% !important ;
+  left: 35% !important;
+}
+.item-React{ 
+  top: 40% !important ;
+  left: 33% !important;
+}
+.item-Next {
+  background-color: red ;
+  border-radius: 50%;
+  top: 38% !important ;
+  left: 35% !important;
+}
+.item-Vite {
+  top: 37% !important ;
+  left: 46% !important;
+}
+
+
+.item-REST{
+  top: 35% !important ;
+  left: 40% !important;
+}
+.item-JWT{
+  top: 37% !important ;
+  left: 46% !important;
+}
+.item-Node{
+  top: 41%!important ;
+  left: 46% !important;
+}
+.item-Express{ 
+  top: 42% !important ;
+  left: 46% !important;
+}
+.item-JAVA {
+  top: 44% !important ;
+  left: 38% !important;
+}
+.item-PHP {
+  top: 40% !important ;
+  left: 35% !important;
+}
+
+.item-MongoDB{ 
+  top: 42% !important ;
+  left: 46% !important;
+}
+.item-PostgreSQL {
+  top: 44% !important ;
+  left: 38% !important;
+}
+.item-MySql {
+  top: 40% !important ;
+  left: 35% !important;
+}
+
+
+.item-VS-Code{
+  top: 35% !important ;
+  left: 40% !important;
+}
+.item-Git{
+  background-color: white;
+  border-radius: 50%;
+  top: 38% !important ;
+  left: 35% !important;
+}
+.item-GitHub{
+  background-color: white;
+  border-radius: 50%;
+  top: 41%!important ;
+  left: 46% !important;
+}
+.item-Postman{ 
+  top: 46% !important ;
+  left: 41% !important;
+}
+
+
+.item-Problem{
+  top: 25% !important ;
+  left: 43% !important;
+}
+.item-Communication{
+  top: 39% !important ;
+  left: 53% !important;
+}
+.item-Team{
+  top: 49% !important ;
+  left: 41% !important;
+}
+.item-Time{ 
+  top: 52% !important ;
+  left: 28% !important;
+}
+.item-Adaptability {
+  top: 33% !important ;
+  left: 27% !important;
+}
+
+
+
+
+
+
+
+/* WRAPPER */
+.skill-wrap {
+  width: 70px;
+  height: 70px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transform: rotate(calc(-1 * var(--angle)));
+}
+
+.skill-wrap img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: 0 0 20px cyan;
+  transition: 1.3s;
+}
+
+
+
+/* Hover zoom */
+.skill-wrap:hover img {
+  transform: scale(1.3);
+}
+
+/* Label */
+.label {
+  position: absolute;
+  bottom: -25px;
+  opacity: 0;
+  transition: 0.4s;
+}
+.orbit-label {
+  position: absolute;
+  left: 50%;
+  bottom: -45px;   /* adjust as needed */
+  transform: translateX(-50%);
+  font-size: 0.9rem;
+  color: white;
+  opacity: 0.7;
+  text-shadow: 0 0 8px cyan;
+  pointer-events: none;
+}
+
+
+
+.skill-wrap:hover .label {
+  opacity: 1;
+}
+
+/* Trail glow */
+.trail {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: cyan;
+  filter: blur(10px);
+  animation: pulse 1.3s infinite alternate;
+}
+
+@keyframes pulse {
+  from { opacity: 0.3; transform: scale(0.7); }
+  to   { opacity: 1; transform: scale(1.4); }
+}
+
+/* CENTER */
+.orbit-center {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: black;
+  border: 3px solid cyan;
+  box-shadow: 0 0 30px cyan, inset 0 0 20px cyan;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  transition: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .orbit {
+    width: 260px;
+    height: 260px;
+  }
+  .orbit-item {
+    transform: rotate(var(--angle)) translate(110px) rotate(calc(-1 * var(--angle)));
+  }
+  .orbit-center {
+    width: 100px;
+    height: 100px;
+  }
+  .skill-wrap {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+
+.skill-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 10rem;
+}
+
+.skill-buttons button {
+  padding: 10px 18px;
+  border: 2px solid cyan;
+  background: transparent;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.skill-buttons button:hover {
+  background: cyan;
+  color: black;
+}
+
+.active-btn {
+  background: cyan;
+  color: black;
+  box-shadow: 0 0 15px cyan;
+}
